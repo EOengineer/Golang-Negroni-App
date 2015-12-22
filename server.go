@@ -25,7 +25,7 @@ func main() {
 
   // **************************** start Postgres related code *******************************************
   // create the statement string
-  var sStmt string = "insert into test (gopher_id, created) values ($1, $2)"
+  var sStmt string = "insert into users (username, password) values (Eric, Password1)"
 
   // lazily open db (doesn't truly open until first request)
   db, err := sql.Open("postgres","host=localhost dbname=testdb sslmode=disable")
